@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "moduleResolution":"node",
+    "target": "ES2016",
+  }
+}

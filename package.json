@@ -1,0 +1,17 @@
+{
+  "name": "mytheresa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test --config config/config.ts",
+    "test_all_browsers": "npx playwright test --config config/all_browser_config.ts",
+    "report": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.36.1"
+  }
+}

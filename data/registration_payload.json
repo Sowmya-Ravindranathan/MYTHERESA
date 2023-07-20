@@ -1,0 +1,19 @@
+{
+  "operationName": "XRegisterUser",
+  "variables": {
+    "subscribeToSMS": false,
+    "academicTitle": "",
+    "email": "email_value",
+    "firstName": "sample",
+    "lastName": "test",
+    "password": "Password1$",
+    "passwordConfirmation": "Password1$",
+    "phoneNumber": "",
+    "salutation": "mr",
+    "subscribedToNewsletter": false,
+    "anonymousCartId": null,
+    "anonymousWishlistId": "",
+    "section": "women"
+  },
+  "query": "mutation XRegisterUser($anonymousCartId: String, $anonymousWishlistId: String, $firstName: String!, $lastName: String!, $email: String!, $password: String!, $phoneNumber: String!, $academicTitle: String, $subscribedToNewsletter: Boolean, $salutation: String, $section: String!) {\n  xRegisterUser(anonymousWishlistId: $anonymousWishlistId, anonymousCartId: $anonymousCartId, firstName: $firstName, lastName: $lastName, email: $email, password: $password, phoneNumber: $phoneNumber, subscribedToNewsletter: $subscribedToNewsletter, academicTitle: $academicTitle, salutation: $salutation, section: $section) {\n    success\n    authenticationData {\n      token\n      wishlistId\n      cartId\n      refreshToken\n      tokenExpiresIn\n      refreshTokenExpiresIn\n      customerData {\n        ...customerData\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment customerData on XCustomer {\n  academicTitle\n  customerInformation {\n    accountCreationChannel\n    adyenCustomerRef\n    customerFlags {\n      cdf\n      csf\n      hasEmailHash\n      __typename\n    }\n    customerReturnsGroup\n    freeShippingCount\n    wishlistNotifications\n    __typename\n  }\n  defaultAddress\n  email\n  emailHash\n  externalCustomerId\n  externalCustomerNumber\n  firstName\n  fullName\n  group {\n    code\n    name\n    __typename\n  }\n  lastName\n  birthday\n  loyaltyPointsAccount\n  middleName\n  phoneNumber\n  verifiedUser\n  salutation\n  subscribedToNewsletter\n  __typename\n}\n"
+}

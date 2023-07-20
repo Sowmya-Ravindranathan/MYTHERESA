@@ -1,0 +1,5 @@
+{
+  "environment": "https://www.mytheresa.com",
+  "browser": "chromium",
+  "headless": false
+}

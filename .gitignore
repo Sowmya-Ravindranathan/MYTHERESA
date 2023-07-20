@@ -1,0 +1,6 @@
+node_modules/
+/test-results/
+/playwright/.cache/
+.DS_Store
+/playwright-report/data
+/playwright-report/trace
